@@ -71,16 +71,16 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	docker
-	docker-compose
-	git
-	git-auto-fetch
-	dotnet
-	zsh-navigation-tools
-	#custom:
+  docker
+  docker-compose
+  git
+  git-auto-fetch
+  dotnet
+  zsh-navigation-tools
+  #custom:
   agnoster
   exa-aliases
-	brew-z
+  brew-z
 )
 
 source $ZSH/oh-my-zsh.sh
