@@ -1,0 +1,46 @@
+# https://github.com/anishathalye/dotbot#configuration
+
+### Aim for idempotent configuration
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    -
+      command: ./osx/install_homebrew.sh
+      description: Installing Homebrew and Essential Packages
+      stdout: true
+
+- shell:
+    - echo "hello"
+
+- link:
+    ~/.gitignore: git/gitignore
+    ~/.gitconfig: git/gitconfig
+
+    ~/.zshrc:
+      path: zsh/zshrc.zsh
+      force: true
+#    ~/.oh-my-zsh: zsh/oh-my-zsh
+#    ~/.oh-my-zsh/custom:
+#      path: zsh/oh-my-zsh/omz_custom_folder
+#      force: true
+
+#    ~/.vim: vim
+#    ~/.vimrc: vimrc
+#
+#- create:
+#    - ~/downloads
+#    - ~/.vim/undo-history
+#
+
+- shell:
+    -
+      command: ./git/initialize_gitconfig_local.sh
+      description: Initializing local git config
+      stdout: true
