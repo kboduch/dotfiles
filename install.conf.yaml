@@ -26,10 +26,10 @@
     ~/.zshrc:
       path: zsh/zshrc.zsh
       force: true
-#    ~/.oh-my-zsh: zsh/oh-my-zsh
-#    ~/.oh-my-zsh/custom:
-#      path: zsh/oh-my-zsh/omz_custom_folder
-#      force: true
+    ~/.oh-my-zsh: zsh/oh-my-zsh
+    ~/.oh-my-zsh/custom:
+      path: zsh/omz_custom_folder
+      force: true
 
 #    ~/.vim: vim
 #    ~/.vimrc: vimrc
