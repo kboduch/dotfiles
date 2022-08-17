@@ -24,3 +24,7 @@ tags
 
 ### macOS
 .DS_Store
+
+### docker-sync
+.docker-sync
+
