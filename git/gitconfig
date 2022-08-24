@@ -14,5 +14,9 @@
   interactive = auto
   grep = auto
   ui = auto
+[fetch]
+  recursesubmodules = yes
+  parallel = 0
 [include]
   path = ~/.gitconfig.local
+
