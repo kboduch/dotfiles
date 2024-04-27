@@ -1,23 +1,25 @@
 #!/bin/bash
-exit;
+
 set -eufo pipefail
 
 {{ $brews := list
-     "ff"
-     "zxc" -}}
+     "curl"
+     "exa"
+     "jq"
+     "git"
+     "commitizen"
+     "bash"
+     "wget"
+     "fd"
+     "zsh" -}}
 {{ $casks := list
-     "1password-cli"
-     "balenaetcher"
      "battery"
      "google-chrome"
      "hammerspoon"
      "iterm2"
      "karabiner-elements"
-     "signal"
      "tailscale"
      "telegram"
-     "transmission"
-     "viber"
      "visual-studio-code" -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
