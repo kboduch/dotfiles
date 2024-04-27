@@ -1,0 +1,30 @@
+#!/bin/bash
+exit;
+set -eufo pipefail
+
+{{ $brews := list
+     "ff"
+     "zxc" -}}
+{{ $casks := list
+     "1password-cli"
+     "balenaetcher"
+     "battery"
+     "google-chrome"
+     "hammerspoon"
+     "iterm2"
+     "karabiner-elements"
+     "signal"
+     "tailscale"
+     "telegram"
+     "transmission"
+     "viber"
+     "visual-studio-code" -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
