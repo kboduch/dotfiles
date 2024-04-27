@@ -2,9 +2,12 @@
 
 set -eufo pipefail
 
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+
 {{ $brews := list
      "curl"
-     "exa"
+     "eza"
      "jq"
      "git"
      "commitizen"
