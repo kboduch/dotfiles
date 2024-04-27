@@ -1,0 +1,7 @@
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/kboduch/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# Register brew binary
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
