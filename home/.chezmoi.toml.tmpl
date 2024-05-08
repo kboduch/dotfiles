@@ -1,7 +1,9 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $workbuzzEmail := promptStringOnce . "workbuzzEmail" "Workbuzz Email address" -}}
 
 [data]
     email = {{ $email | quote }}
+    workbuzzEmail = {{ $workbuzzEmail | quote }}
 
 [github]
     refreshPeriod = "12h"

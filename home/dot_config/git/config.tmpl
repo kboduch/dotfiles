@@ -25,5 +25,10 @@
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [commit]
   gpgsign = true
-[includeIf "hasconfig:remote.*.url:**/github.com*/**"]
-    path = config.github
+[includeIf "gitdir:~/Projects/workbuzz_gl/"]
+	path = config.workbuzz_gl
+[includeIf "gitdir:~/Projects/personal_gh/"]
+	path = config.personal_gh
+[includeIf "gitdir:~/.local/share/chezmoi/"]
+	path = config.personal_gh
+
