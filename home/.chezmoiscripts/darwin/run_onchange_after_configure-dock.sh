@@ -26,5 +26,5 @@ for label in "${remove_labels[@]}"; do
 	dockutil --no-restart --remove "${label}" || true
 done
 
-dockutil --no-restart --add /Applications/Todoist.app --after Music
-dockutil --no-restart --add /Applications/Obsidian.app --after Todoist
+dockutil --no-restart --add /Applications/Todoist.app --after Music || true
+dockutil --no-restart --add /Applications/Obsidian.app --after Todoist || true
