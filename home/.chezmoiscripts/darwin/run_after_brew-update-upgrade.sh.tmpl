@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Runs after updating the target state, always.
+
+set -eufo pipefail
+
+source ~/.kboduch/common.lib.sh
+
+print_info "Brew updating and upgrading dependencies"
+run_command_reporting_status "brew update --force"
+run_command_reporting_status "brew upgrade --display-times --greedy"

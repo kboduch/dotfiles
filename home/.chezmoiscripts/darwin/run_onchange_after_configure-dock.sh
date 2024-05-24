@@ -1,6 +1,12 @@
 #!/bin/bash
 
+# Runs after updating the target state only if the file contents have changed.
+
 set -eufo pipefail
+
+source ~/.kboduch/common.lib.sh
+
+print_info "Configuring the dock"
 
 trap 'killall Dock' EXIT
 
@@ -19,7 +25,7 @@ declare -a remove_labels=(
 	Numbers
 	Pages
 	"App Store"
-    "System Settings"
+  "System Settings"
 )
 
 for label in "${remove_labels[@]}"; do
