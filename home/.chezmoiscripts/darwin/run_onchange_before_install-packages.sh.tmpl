@@ -2,7 +2,6 @@
 
 set -eufo pipefail
 
-brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
 # https://guumaster.github.io/hostctl/docs/
 brew install guumaster/tap/hostctl
@@ -50,3 +49,6 @@ brew "{{ . }}"
 cask "{{ . }}"
 {{ end -}}
 EOF
+
+l
+echo "OK"
