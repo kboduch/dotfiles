@@ -4,7 +4,8 @@
 
 set -eufo pipefail
 
-source ~/.kboduch/common.lib.sh
+# Source from the chezmoi sourceDir to ensure the very first run succeeds. This runs before updating the target state.
+source {{ joinPath .chezmoi.sourceDir "dot_kboduch" "common.lib.sh" | quote }}
 
 print_info "Installing brew dependencies"
 
