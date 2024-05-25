@@ -5,3 +5,5 @@ export PATH="$PATH:/Users/kboduch/Library/Application Support/JetBrains/Toolbox/
 # Register brew binary
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Ask to run chezmoi update once every 24h.
+"$HOME/.kboduch/execute_chezmoi_update_once_a_day.sh"
