@@ -90,6 +90,10 @@ zstyle ':omz:plugins:eza' 'git-status' yes
 ## theme agnoster config:
 DEFAULT_USER="kboduch"
 
+## zsh autocomplete provided by brew
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -117,15 +121,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# zsh autocomplete provided by brew
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
 
 # one password plugins
 source "$HOME/.config/op/plugins.sh"
