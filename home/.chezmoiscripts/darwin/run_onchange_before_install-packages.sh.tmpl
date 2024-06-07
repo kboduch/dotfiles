@@ -22,6 +22,7 @@ brew install guumaster/tap/hostctl
      "bash"
      "wget"
      "fd"
+     "mas"
      "awscli"
      "zsh" -}}
 {{ $casks := list
@@ -56,3 +57,7 @@ brew "{{ . }}"
 cask "{{ . }}"
 {{ end -}}
 EOF
+
+## Applications not available on Brew
+#Tomito
+mas install 1526042938
