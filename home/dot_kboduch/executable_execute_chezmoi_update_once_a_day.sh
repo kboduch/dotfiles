@@ -3,6 +3,11 @@
 LAST_RUN_FILE="$HOME/.last_chezmoi_update_execution_timestamp.txt"
 CURRENT_TIMESTAMP=$(date +%s)
 ONE_DAY_SECONDS=$((24 * 60 * 60))
+CURRENT_HOUR=$(date +%H)
+
+if [ "$CURRENT_HOUR" -lt 19 ] || [ "$CURRENT_HOUR" -gt 23 ]; then
+  exit 0
+fi
 
 if [ -f "$LAST_RUN_FILE" ]; then
   LAST_RUN_TIMESTAMP=$(cat "$LAST_RUN_FILE")
